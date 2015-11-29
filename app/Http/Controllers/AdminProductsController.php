@@ -12,7 +12,7 @@ class  AdminProductsController extends Controller{
         $this->products = $product;
     }
 
-    public function products(){
+    public function index(){
 
         $products = $this->products->all();
 

@@ -12,7 +12,7 @@ class  AdminCategoriesController extends Controller{
         $this->categories = $category;
     }
 
-    public function categories(){
+    public function index(){
 
         $categories = $this->categories->all();
 
