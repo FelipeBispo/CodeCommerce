@@ -137,6 +137,8 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
 
+        Bestmomo\Scafold\ScafoldServiceProvider::class,
+
         /*
          * Application Service Providers...
          */
