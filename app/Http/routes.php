@@ -19,25 +19,28 @@ Route::get('category/{category}', function (\CodeCommerce\Category $category){
 });*/
 
 Route::group(['prefix'=> 'admin'], function (){
-    Route::get('categories/{id?}',['as'=>'categories', 'uses'=> 'AdminCategoriesController@index',function($id=0){
+    Route::match(['get','post','put','delete'],'categories/{id?}',['as'=>'categories', 'uses'=> 'AdminCategoriesController@index',function($id=0){
         if($id)
             //return Redirect::action('WelcomeController@exemplo');
         return 'Não possui id';
     }])->where ('id','[0-9]+');
 
-    Route::get('products/{id?}',['as'=>'products', 'uses'=> 'AdminProductsController@index',function($id=0){
+    Route::match(['get','post','put','delete'],'products/{id?}',['as'=>'products', 'uses'=> 'AdminProductsController@index',function($id=0){
         if($id)
             //return Redirect::action('WelcomeController@exemplo');
         return 'Não possui id';
     }])->where ('id','[0-9]+');
 
 });
+/*
+Route::get('exemplo', 'WelcomeController@exemplo');
 
-//Route::get('exemplo', 'WelcomeController@exemplo');
+Route::get('admin/categories', 'AdminCategoriesController@index');
 
-//Route::get('admin/categories', 'AdminCategoriesController@index');
-
-//Route::get('admin/products', 'AdminProductsController@index');
+Route::get('admin/products', 'AdminProductsController@index');
 
 //Fase 4 - CRUD
-//Route::get('categories','CategoriesController@index');
+Route::get('categories','CategoriesController@index');
+
+Route::get('categories/create','CategoriesController@create');
+*/
