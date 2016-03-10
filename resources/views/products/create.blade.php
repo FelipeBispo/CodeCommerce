@@ -32,13 +32,13 @@
             <div class="form-group">
                 {!! Form::label('featured','Featured:') !!}
                 {!! Form::checkbox('featured', true, ['class'=>'form-control']) !!}
-                {!! Form::hidden('featured', false) !!}
+                {!! Form::hidden('featured', 0) !!}
             </div>
 
             <div class="form-group">
                 {!! Form::label('recommend','Recommend:') !!}
                 {!! Form::checkbox('recommend', true, ['class'=>'form-control']) !!}
-                {!! Form::hidden('recommend', false) !!}
+                {!! Form::hidden('recommend', 0) !!}
             </div>
 
             <div class="form-group">

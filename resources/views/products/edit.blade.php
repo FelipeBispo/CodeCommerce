@@ -31,14 +31,14 @@
 
             <div class="form-group">
                 {!! Form::label('featured','Featured:') !!}
-                {!! Form::checkbox('featured', $product->featured, ['class'=>'form-control']) !!}
-                {!! Form::hidden('featured', $product->featured) !!}
+                {!! Form::checkbox('featured',1, $product->featured) !!}
+                {!! Form::hidden('featured', 0) !!}
             </div>
 
             <div class="form-group">
                 {!! Form::label('recommend','Recommend:') !!}
-                {!! Form::checkbox('recommend', $product->recommend, ['class'=>'form-control']) !!}
-                {!! Form::hidden('recommend', $product->recommend) !!}
+                {!! Form::checkbox('recommend',1, $product->recommend) !!}
+                {!! Form::hidden('recommend', 0) !!}
             </div>
 
             <div class="form-group">
