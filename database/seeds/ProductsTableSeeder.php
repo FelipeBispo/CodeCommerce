@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Eloquent\Model;
-use CodeCommerce\Category;
+use CodeCommerce\Product;
 use Faker\Factory as Faker;
 
 class ProductsTableSeeder extends \Illuminate\Database\Seeder
@@ -11,7 +11,7 @@ class ProductsTableSeeder extends \Illuminate\Database\Seeder
 
         DB::table('products')->truncate();
 
-        factory('CodeCommerce\products',15)->create();
+        factory('CodeCommerce\Product',15)->create();
 
     }
 
