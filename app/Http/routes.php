@@ -40,29 +40,28 @@ Route::get('admin/categories', 'AdminCategoriesController@index');
 Route::get('admin/products', 'AdminProductsController@index');
 */
 
-//Fase 4 - CRUD
-Route::get('categories',['as'=>'category', 'uses'=>'CategoriesController@index']);
+Route::group(['prefix'=>'admin', 'where'=>['id'=>'[0-9]+']], function(){
+    //Fase 4 - CRUD
+    Route::group(['prefix'=>'categories'], function(){
 
-Route::post('categories',['as'=>'category.store', 'uses'=>'CategoriesController@store']);
+        Route::get('',['as'=>'category', 'uses'=>'CategoriesController@index']);
+        Route::post('',['as'=>'category.store', 'uses'=>'CategoriesController@store']);
+        Route::get('create',['as'=>'category.create', 'uses'=>'CategoriesController@create']);
+        Route::get('{id}/destroy',['as'=>'category.destroy', 'uses'=>'CategoriesController@destroy']);
+        Route::get('{id}/edit',['as'=>'category.edit', 'uses'=>'CategoriesController@edit']);
+        Route::put('{id}/update',['as'=>'category.update', 'uses'=>'CategoriesController@update']);
 
-Route::get('categories/create',['as'=>'category.create', 'uses'=>'CategoriesController@create']);
+    });
+    
+    Route::group(['prefix'=>'products'], function(){
+    //REPLICANDO PARA PRODUCTS
 
-Route::get('categories/{id}/destroy',['as'=>'category.destroy', 'uses'=>'CategoriesController@destroy']);
+        Route::get('',['as'=>'product', 'uses'=>'ProductsController@index']);
+        Route::post('',['as'=>'product.store', 'uses'=>'ProductsController@store']);
+        Route::get('create',['as'=>'product.create', 'uses'=>'ProductsController@create']);
+        Route::get('{id}/destroy',['as'=>'product.destroy', 'uses'=>'ProductsController@destroy']);
+        Route::get('{id}/edit',['as'=>'product.edit', 'uses'=>'ProductsController@edit']);
+        Route::put('{id}/update',['as'=>'product.update', 'uses'=>'ProductsController@update']);
+    });
 
-Route::get('categories/{id}/edit',['as'=>'category.edit', 'uses'=>'CategoriesController@edit']);
-
-Route::put('categories/{id}/update',['as'=>'category.update', 'uses'=>'CategoriesController@update']);
-
-//REPLICANDO PARA PRODUCTS
-
-Route::get('products',['as'=>'product', 'uses'=>'ProductsController@index']);
-
-Route::post('products',['as'=>'product.store', 'uses'=>'ProductsController@store']);
-
-Route::get('products/create',['as'=>'product.create', 'uses'=>'ProductsController@create']);
-
-Route::get('products/{id}/destroy',['as'=>'product.destroy', 'uses'=>'ProductsController@destroy']);
-
-Route::get('products/{id}/edit',['as'=>'product.edit', 'uses'=>'ProductsController@edit']);
-
-Route::put('products/{id}/update',['as'=>'product.update', 'uses'=>'ProductsController@update']);
+});

@@ -11,7 +11,7 @@ class ProductsTableSeeder extends \Illuminate\Database\Seeder
 
         DB::table('products')->truncate();
 
-        factory('CodeCommerce\Product',15)->create();
+        factory('CodeCommerce\Product',40)->create();
 
     }
 
