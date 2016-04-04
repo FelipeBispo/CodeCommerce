@@ -28,6 +28,11 @@
                 {!! Form::label('description','Description:') !!}
                 {!! Form::textarea('description', null, ['class'=>'form-control']) !!}
             </div>
+            
+            <div class="form-group">
+                {!! Form::label('tag','Tags:') !!}
+                {!! Form::textarea('tag', null, ['class'=>'form-control']) !!}
+            </div>
 
             <div class="form-group">
                 {!! Form::label('price','Price:') !!}

@@ -30,6 +30,11 @@
             </div>
 
             <div class="form-group">
+                {!! Form::label('tag','Tags:') !!}
+                {!! Form::textarea('tag', implode(',',$product->tags->lists('name')->toArray()), ['class'=>'form-control']) !!}
+            </div>
+
+            <div class="form-group">
                 {!! Form::label('price','Price:') !!}
                 {!! Form::input('decimal','price', $product->price, ['class'=>'form-control']) !!}
             </div>
@@ -47,7 +52,7 @@
             </div>
 
             <div class="form-group">
-                {!! Form::submit('Add Product', ['class'=>'btn btn-primary form-control']) !!}
+                {!! Form::submit('Save Product', ['class'=>'btn btn-primary form-control']) !!}
             </div>
 
         {!! Form::close() !!}
