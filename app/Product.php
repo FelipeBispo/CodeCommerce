@@ -33,15 +33,29 @@ class Product extends Model
     	
     }
 
-    /*public function getNameDescriptionAttribute(){
-        return $this->name." - ".$this->description;
-    }*/
-
     public function getTagListAttribute(){
         
         $tags = $this->tags->lists('name');
         print_r($tags);
         return implode(',', $tags);
+    }
+
+    public function scopeFeatured($query){
+
+        return $query->where('featured','=',1);
+
+    }
+
+    public function scopeRecommend($query){
+
+        return $query->where('recommend','=',1);
+
+    }
+
+    public function scopeCategoryProducts($query,$category_id){
+
+        return $query->where('category_id','=',$category_id);
+
     }
 
 }

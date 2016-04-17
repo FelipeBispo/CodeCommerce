@@ -35,10 +35,12 @@ Route::group(['prefix'=> 'admin'], function (){
 
 Route::get('exemplo', 'WelcomeController@exemplo');
 
-Route::get('admin/categories', 'AdminCategoriesController@index');
 
 Route::get('admin/products', 'AdminProductsController@index');
 */
+Route::get('/', 'StoreController@index');
+
+Route::get('{id}/category',['as'=>'store.category', 'uses'=>'StoreController@category']);
 
 Route::group(['prefix'=>'admin', 'where'=>['id'=>'[0-9]+']], function(){
     //Fase 4 - CRUD
