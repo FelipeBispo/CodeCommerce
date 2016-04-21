@@ -8,7 +8,8 @@
     <meta name="author" content="">
     <title>Home | E-Shop</title>
    
-    @yield('reference')
+    <!--yield('reference')-->
+    <link rel="stylesheet" type="text/css" href="{{ elixir('css/all.css') }}">
 
 </head><!--/head-->
 
@@ -140,11 +141,7 @@
 
 
 
-<script src="js/jquery.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.scrollUp.min.js"></script>
-<script src="js/jquery.prettyPhoto.js"></script>
-<script src="js/main.js"></script>
+<script src="{{ elixir('js/all.js') }}"></script>
 
 </body>
 </html>
