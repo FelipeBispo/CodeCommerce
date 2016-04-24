@@ -7,8 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Home | E-Shop</title>
-   
-    <!--yield('reference')-->
+
     <link rel="stylesheet" type="text/css" href="{{ elixir('css/all.css') }}">
 
 </head><!--/head-->

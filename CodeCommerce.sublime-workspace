@@ -59,23 +59,23 @@
 			"file": "resources/views/store/store.blade.php",
 			"settings":
 			{
-				"buffer_size": 5641,
+				"buffer_size": 5528,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "package.json",
+			"file": "resources/views/store/index.blade.php",
 			"settings":
 			{
-				"buffer_size": 159,
+				"buffer_size": 3748,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "gulpfile.js",
+			"file": "app/Http/Controllers/StoreController.php",
 			"settings":
 			{
-				"buffer_size": 692,
+				"buffer_size": 823,
 				"line_ending": "Unix"
 			}
 		}
@@ -119,21 +119,26 @@
 	[
 		"/home/felipebispo/laravel_commerce",
 		"/home/felipebispo/laravel_commerce/app",
-		"/home/felipebispo/laravel_commerce/public",
-		"/home/felipebispo/laravel_commerce/public/css",
+		"/home/felipebispo/laravel_commerce/app/Http",
+		"/home/felipebispo/laravel_commerce/app/Http/Controllers",
 		"/home/felipebispo/laravel_commerce/resources",
-		"/home/felipebispo/laravel_commerce/resources/assets",
-		"/home/felipebispo/laravel_commerce/resources/assets/css"
+		"/home/felipebispo/laravel_commerce/resources/views",
+		"/home/felipebispo/laravel_commerce/resources/views/store",
+		"/home/felipebispo/laravel_commerce/resources/views/store/partial"
 	],
 	"file_history":
 	[
-		"/home/felipebispo/laravel_commerce/resources/assets/css/main.css",
+		"/home/felipebispo/laravel_commerce/resources/views/store/products.blade.php",
+		"/home/felipebispo/laravel_commerce/resources/views/store/category_products.blade.php",
+		"/home/felipebispo/laravel_commerce/gulpfile.js",
+		"/home/felipebispo/laravel_commerce/public/build/rev-manifest.json",
 		"/home/felipebispo/laravel_commerce/package.json",
+		"/home/felipebispo/laravel_commerce/public/css/all.css",
+		"/home/felipebispo/laravel_commerce/resources/assets/css/main.css",
 		"/home/felipebispo/laravel_commerce/app/Http/routes.php",
 		"/home/felipebispo/laravel_commerce/resources/views/store/categories_partial.blade.php",
 		"/home/felipebispo/laravel_commerce/app/Product.php",
 		"/home/felipebispo/laravel_commerce/resources/views/store/index.blade.php",
-		"/home/felipebispo/laravel_commerce/resources/views/store/category_products.blade.php",
 		"/home/felipebispo/laravel_commerce/app/Http/Controllers/StoreController.php",
 		"/home/felipebispo/laravel_commerce/app/Category.php",
 		"/home/felipebispo/laravel_commerce/resources/views/store/store.blade.php",
@@ -227,15 +232,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5641,
+						"buffer_size": 5528,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								256,
-								256
+								253,
+								253
 							]
 						],
 						"settings":
@@ -248,60 +253,64 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "package.json",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 159,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								159,
-								159
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
 					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "gulpfile.js",
+					"buffer": 1,
+					"file": "resources/views/store/index.blade.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 692,
+						"buffer_size": 3748,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								472,
-								472
+								25,
+								25
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 765.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/Http/Controllers/StoreController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 823,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								757,
+								757
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 187.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,

@@ -38,7 +38,7 @@ class Product extends Model
         $tags = $this->tags->lists('name');
         print_r($tags);
         return implode(',', $tags);
-    }
+    }   
 
     public function scopeFeatured($query){
 
@@ -52,9 +52,9 @@ class Product extends Model
 
     }
 
-    public function scopeCategoryProducts($query,$category_id){
+    public function scopeOfCategory($query,$type){
 
-        return $query->where('category_id','=',$category_id);
+        return $query->where('category_id','=',$type);
 
     }
 
