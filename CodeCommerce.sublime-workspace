@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"vi",
+				"view"
+			],
+			[
 				"print",
 				"print_r"
 			],
@@ -56,26 +60,18 @@
 	"buffers":
 	[
 		{
-			"file": "resources/views/store/store.blade.php",
+			"file": "app/Cart.php",
 			"settings":
 			{
-				"buffer_size": 5528,
+				"buffer_size": 48,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "resources/views/store/index.blade.php",
+			"file": "app/Category.php",
 			"settings":
 			{
-				"buffer_size": 3748,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/Http/Controllers/StoreController.php",
-			"settings":
-			{
-				"buffer_size": 823,
+				"buffer_size": 247,
 				"line_ending": "Unix"
 			}
 		}
@@ -119,15 +115,24 @@
 	[
 		"/home/felipebispo/laravel_commerce",
 		"/home/felipebispo/laravel_commerce/app",
-		"/home/felipebispo/laravel_commerce/app/Http",
 		"/home/felipebispo/laravel_commerce/app/Http/Controllers",
-		"/home/felipebispo/laravel_commerce/resources",
 		"/home/felipebispo/laravel_commerce/resources/views",
 		"/home/felipebispo/laravel_commerce/resources/views/store",
 		"/home/felipebispo/laravel_commerce/resources/views/store/partial"
 	],
 	"file_history":
 	[
+		"/home/felipebispo/laravel_commerce/resources/views/store/category.blade.php",
+		"/home/felipebispo/laravel_commerce/resources/views/store/tag.blade.php",
+		"/home/felipebispo/laravel_commerce/app/Http/Controllers/StoreController.php",
+		"/home/felipebispo/laravel_commerce/app/Product.php",
+		"/home/felipebispo/laravel_commerce/resources/views/store/product.blade.php",
+		"/home/felipebispo/laravel_commerce/app/Http/routes.php",
+		"/home/felipebispo/laravel_commerce/resources/views/store/index.blade.php",
+		"/home/felipebispo/laravel_commerce/resources/views/store/partial/categories.blade.php",
+		"/home/felipebispo/laravel_commerce/resources/views/store/partial/products.blade.php",
+		"/home/felipebispo/laravel_commerce/resources/views/store/store.blade.php",
+		"/home/felipebispo/laravel_commerce/app/Http/Controllers/ProductsController.php",
 		"/home/felipebispo/laravel_commerce/resources/views/store/products.blade.php",
 		"/home/felipebispo/laravel_commerce/resources/views/store/category_products.blade.php",
 		"/home/felipebispo/laravel_commerce/gulpfile.js",
@@ -135,15 +140,9 @@
 		"/home/felipebispo/laravel_commerce/package.json",
 		"/home/felipebispo/laravel_commerce/public/css/all.css",
 		"/home/felipebispo/laravel_commerce/resources/assets/css/main.css",
-		"/home/felipebispo/laravel_commerce/app/Http/routes.php",
 		"/home/felipebispo/laravel_commerce/resources/views/store/categories_partial.blade.php",
-		"/home/felipebispo/laravel_commerce/app/Product.php",
-		"/home/felipebispo/laravel_commerce/resources/views/store/index.blade.php",
-		"/home/felipebispo/laravel_commerce/app/Http/Controllers/StoreController.php",
 		"/home/felipebispo/laravel_commerce/app/Category.php",
-		"/home/felipebispo/laravel_commerce/resources/views/store/store.blade.php",
 		"/home/felipebispo/laravel_commerce/resources/views/store/category_products.php",
-		"/home/felipebispo/laravel_commerce/app/Http/Controllers/ProductsController.php",
 		"/home/felipebispo/laravel_commerce/app/Http/Controllers/AdminProductsController.php",
 		"/home/felipebispo/laravel_commerce/public/images/no-img.jpg",
 		"/home/felipebispo/laravel_commerce/config/database.php",
@@ -223,97 +222,63 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "resources/views/store/store.blade.php",
+					"file": "app/Cart.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5528,
+						"buffer_size": 48,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								253,
-								253
+								46,
+								46
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/Category.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 247,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "resources/views/store/index.blade.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3748,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								25,
-								25
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 765.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "app/Http/Controllers/StoreController.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 823,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								757,
-								757
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 187.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -396,7 +361,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 337.0,
+	"side_bar_width": 242.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

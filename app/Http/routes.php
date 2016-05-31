@@ -43,6 +43,8 @@ Route::get('/', 'StoreController@index');
 Route::get('category/{id}',['as'=>'store.category', 'uses'=>'StoreController@category']);
 Route::get('product/{id}',['as'=>'store.product', 'uses'=>'StoreController@product']);
 Route::get('tag/{id}',['as'=>'store.tag', 'uses'=>'StoreController@tag']);
+Route::get('cart',['as'=>'cart', 'uses'=>'CartController@index']);
+Route::get('cart/add/{id}',['as'=>'cart.add', 'uses'=>'CartController@add']);
 
 Route::group(['prefix'=>'admin', 'where'=>['id'=>'[0-9]+']], function(){
     //Fase 4 - CRUD
