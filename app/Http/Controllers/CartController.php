@@ -26,18 +26,13 @@ class CartController extends Controller
             Session::set('cart',$this->cart);
         }
 
-        return view('store.cart');
+        return view('store.cart', ['cart' =>Session::get('cart')]);
 
     }
 
     public function add($id){
 
-        if(Session::has('cart')){
-            $cart = Session::get('cart');
-        }
-        else{
-            $cart = $this->cart;
-        }
+        $cart = $this->getCart();
 
         $product=Product::find($id);
 
@@ -47,4 +42,48 @@ class CartController extends Controller
 
         return redirect()->route('cart');
     }
+
+    function destroy($id){
+
+        $cart = $this->getCart();
+
+        $cart->remove($id);
+
+        Session::set('cart',$cart);
+
+        return redirect()->route('cart');
+        
+    }
+
+    function update($id, $quantity){
+
+        $cart = $this->getCart();
+        
+        $items = $cart->update($id,$quantity);
+
+        Session::set('cart',$cart);
+
+        return response()->json(array(
+            'success' => true,
+            'price'   => number_format($items[$id]['price'] * $quantity, 2, ',', '.'),
+            'total'   => number_format($cart->getTotal(), 2, ',', '.')
+        ));
+
+    }
+
+    /**
+     * @return Cart
+     */
+    private function getCart()
+    {
+        if (Session::has('cart')) {
+            $cart = Session::get('cart');
+        } else {
+            $cart = $this->cart;
+        }
+
+        return $cart;
+
+    }
+
 }

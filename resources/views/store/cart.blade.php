@@ -20,30 +20,30 @@
                         @forelse ($cart->all() as $k=>$item)
                             <tr>
                                 <td class="cart_product">
-                                    <a href="#">
+                                    <a href="{{  route('store.product',['id'=>$k]) }}">
                                         Imagem
                                     </a>
                                 </td>
                                 <td class="cart_description">
                                     <h4><a href="#">{{ $item['name'] }}</a> </h4>
-                                    <p>Codigo: {{$k}}</p>
+                                    <p name="id_produto">Codigo: {{$k}}</p>
                                 </td>
                                 <td class="cart_price">
                                     R$ {{$item['price']}}
                                 </td>
 
                                 <td class="cart_quantity">
-                                    {{$item['qtd']}}
+                                    <input type="number" min="1" id="quantity_products" value="{{$item['qtd']}}" onchange="update_quantity(this)">
+
                                 </td>
 
                                 <td class="cart_total">
-                                    <p class="cart_total_price">{{$item['price']*$item['qtd']}}</p>
+                                    <p name="cart_total_price" class="cart_total_price">{{$item['price']*$item['qtd']}}</p>
                                 </td>
 
                                 <td class="cart_delete">
-                                    <a href="#" class="cart_quantity_delete">Delete</a>
+                                    <a href="{{ route('cart.destroy',['id'=>$k]) }}" class="cart_quantity_delete">Delete</a>
                                 </td>
-x
                             </tr>
                         @empty
 
@@ -53,9 +53,55 @@ x
                                 </td>
                             </tr>
                         @endforelse
+
+                        <tr class="cart_menu">
+                            <td colspan="6">
+                                <div class="pull-right">
+                                    <span id ="total_price" style="margin-right: 110px">
+                                        Total: R$ {{ $cart->getTotal() }}
+                                    </span>
+
+                                    <a href="#" class="btn btn-success">Fechar a conta</a>
+
+                                </div>
+                            </td>
+
+                        </tr>
                     </tbody>
                 </table>
             </div>
         </div>
     </section>
+@stop
+
+@section('javascript')
+
+    <script>
+        function update_quantity(e) {
+            var id_linha = e.parentNode.parentNode.rowIndex;
+
+            var id = document.getElementsByName("id_produto")[id_linha-1].innerHTML.replace('Codigo: ','');
+            //console.log(id);
+
+            var quantity = $(e).val();
+            //console.log(quantity);
+
+            $.ajax({
+                method: "GET",
+                url: "cart/update/" + id + '/' +  quantity,
+                data: {},
+                success: function(result){
+                    if(result.success){
+
+                        document.getElementsByName("cart_total_price")[id_linha-1].innerHTML= 'R$' + result.price;
+                        document.getElementById("total_price").innerHTML= 'R$' + result.total;
+
+                    } else {
+                    alert("Erro! Erro na atualizacao do carrinho.");
+                    }
+                }
+            });
+        }
+    </script>
+
 @stop

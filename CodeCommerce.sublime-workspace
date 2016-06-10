@@ -63,7 +63,7 @@
 			"file": "app/Cart.php",
 			"settings":
 			{
-				"buffer_size": 48,
+				"buffer_size": 781,
 				"line_ending": "Unix"
 			}
 		},
@@ -114,11 +114,7 @@
 	"expanded_folders":
 	[
 		"/home/felipebispo/laravel_commerce",
-		"/home/felipebispo/laravel_commerce/app",
-		"/home/felipebispo/laravel_commerce/app/Http/Controllers",
-		"/home/felipebispo/laravel_commerce/resources/views",
-		"/home/felipebispo/laravel_commerce/resources/views/store",
-		"/home/felipebispo/laravel_commerce/resources/views/store/partial"
+		"/home/felipebispo/laravel_commerce/app"
 	],
 	"file_history":
 	[
@@ -231,15 +227,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 48,
+						"buffer_size": 781,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								46,
-								46
+								0,
+								0
 							]
 						],
 						"settings":
