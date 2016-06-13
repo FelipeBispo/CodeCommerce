@@ -2,6 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f716cb9-582d-4e0c-81cc-179dc13ca15e" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Controllers/CheckoutController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Controllers/TestController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Middleware/IsAdmin.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Order.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/OrderItem.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/migrations/2016_06_11_004938_create_orders_table.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/migrations/2016_06_11_005012_create_order_items_table.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/migrations/2016_06_13_190654_add_is_admin.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/database.db" afterPath="$PROJECT_DIR$/database/database.db" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductsController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductsController.php" />
@@ -488,12 +496,12 @@
       <workItem from="1465601655138" duration="326000" />
       <workItem from="1465606126474" duration="2605000" />
       <workItem from="1465827100104" duration="18292000" />
-      <workItem from="1465853558488" duration="2042000" />
+      <workItem from="1465853558488" duration="2240000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55004000" />
+    <option name="totallyTimeSpent" value="55202000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
