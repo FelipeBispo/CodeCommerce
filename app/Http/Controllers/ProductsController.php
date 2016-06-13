@@ -17,6 +17,9 @@ class ProductsController extends Controller
     private $productModel;
 
     public function __construct(Product $productModel){
+
+        $this->middleware('auth');
+
         $this->productModel = $productModel;
     }
 

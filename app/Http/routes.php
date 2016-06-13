@@ -38,6 +38,7 @@ Route::get('exemplo', 'WelcomeController@exemplo');
 
 Route::get('admin/products', 'AdminProductsController@index');
 */
+
 Route::get('/', 'StoreController@index');
 
 Route::get('category/{id}',['as'=>'store.category', 'uses'=>'StoreController@category']);
@@ -48,7 +49,9 @@ Route::get('cart/add/{id}',['as'=>'cart.add', 'uses'=>'CartController@add']);
 Route::get('cart/destroy/{id}',['as'=>'cart.destroy', 'uses'=>'CartController@destroy']);
 Route::get('cart/update/{id}/{quantity}',['as'=>'cart.update', 'uses'=>'CartController@update']);
 
-Route::group(['prefix'=>'admin', 'where'=>['id'=>'[0-9]+']], function(){
+Route::get('checkout/placeOrder',['as'=>'checkout.place', 'uses'=>'CheckoutController@place']);
+
+Route::group(['prefix'=>'admin', 'middleware'=>'isadmin', 'where'=>['id'=>'[0-9]+']], function(){
     //Fase 4 - CRUD
     Route::group(['prefix'=>'categories'], function(){
 
@@ -83,3 +86,9 @@ Route::group(['prefix'=>'admin', 'where'=>['id'=>'[0-9]+']], function(){
     });
 
 });
+
+Route::controllers([
+    'auth'=>'Auth\AuthController',
+    'password'=>'Auth\PasswordController',
+    'test'=>'TestController'
+]);
