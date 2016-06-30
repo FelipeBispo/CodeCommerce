@@ -49,9 +49,20 @@ Route::get('cart/add/{id}',['as'=>'cart.add', 'uses'=>'CartController@add']);
 Route::get('cart/destroy/{id}',['as'=>'cart.destroy', 'uses'=>'CartController@destroy']);
 Route::get('cart/update/{id}/{quantity}',['as'=>'cart.update', 'uses'=>'CartController@update']);
 
-Route::get('checkout/placeOrder',['as'=>'checkout.place', 'uses'=>'CheckoutController@place']);
+Route::group(['middleware'=>'auth'], function(){
+    Route::get('checkout/placeOrder',['as'=>'checkout.place', 'uses'=>'CheckoutController@place']);
+    Route::get('account/orders',['as'=>'account.orders', 'uses'=>'AccountController@orders']);
+    Route::get('admin_orders',['as'=>'orders.admin_orders', 'uses'=>'AccountController@admin_orders']);
+});
 
-Route::group(['prefix'=>'admin', 'middleware'=>'isadmin', 'where'=>['id'=>'[0-9]+']], function(){
+
+Route::group(['prefix'=>'admin', 'middleware'=>'auth', 'where'=>['id'=>'[0-9]+']], function(){
+
+    Route::group(['prefix'=>'orders'], function(){
+        Route::get('',['as'=>'orders.all', 'uses'=>'AccountController@all']);
+        Route::get('{id}/{status}/update',['as'=>'orders.update_status', 'uses'=>'AccountController@update_status']);
+    });
+
     //Fase 4 - CRUD
     Route::group(['prefix'=>'categories'], function(){
 

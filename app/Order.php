@@ -25,5 +25,21 @@ class Order extends Model
 
     }
 
+    public function getStatus()
+    {
+        switch ($this->attributes['status'])
+        {
+            case 0:
+                return 'Pagamento Pendente';
+                break;
+            case 1:
+                return 'Pedido Aprovado';
+                break;
+            case 2:
+                return 'Finalizado';
+                break;
+        }
+    }
+
 
 }

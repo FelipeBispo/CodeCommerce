@@ -41,7 +41,9 @@
 				<ul class="nav navbar-nav">
 					<li><a href="{{ route('product') }}">Products</a></li>
 				</ul>
-
+				<ul class="nav navbar-nav">
+					<li><a href="{{ route('orders.all') }}">Orders</a></li>
+				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					@if(auth()->guest())
 						@if(!Request::is('auth/login'))
@@ -68,5 +70,7 @@
 	<!-- Scripts -->
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+	@yield('javascript')
 </body>
 </html>
