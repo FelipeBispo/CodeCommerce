@@ -27,9 +27,9 @@ class AddAdress extends Migration
     public function down()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn('street');
-            $table->dropColumn('city');
-            $table->dropColumn('country');
+            $table->removeColumn('street');
+            $table->removeColumn('city');
+            $table->removeColumn('country');
         });
     }
 }
